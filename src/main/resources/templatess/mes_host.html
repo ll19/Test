@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<title>房主信息</title>
+</head>
+<body>
+<div class="container col-md-12">
+   <table class="table">
+   <thead>
+    <tr><td colspan="2">房主信息</td></tr>
+   </thead>
+   <tr><td>姓名：</td><td th:text="${hquer.firstName}+${hquer.lastName}">姓名</td></tr>
+   <tr><td>住址：</td><td th:text="${hquer.userName}">住址</td></tr>
+   <tr><td>手机号码:</td><td th:text="${hquer.TEL}">手机号码</td></tr>
+   <tr><td>ID:</td><td th:text="${hquer.TEL}">ID</td></tr>
+   <tr><td>密码:</td><td th:text="${hquer.TEL}">密码</td></tr>
+   </table>
+   <a th:href="@{'/message/'+${hquer.userName}}">查看我的消息</a>
+   <a th:href="@{/hquer/login}">重新登陆</a>
+</div>
+</body>
+</html>
